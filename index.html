@@ -75,18 +75,19 @@
     .tag { font-size: 14px; padding: 4px 12px; border-radius: 999px; background: var(--mist); color: #2A3A70; }
 
     /* career route */
-    .route { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 8px; }
-    .route::before { content: ""; position: absolute; left: 0; right: 0; top: 9px; height: 2px; background: var(--blue); }
-    .route::after { content: ""; position: absolute; right: -4px; top: 4px; border: 6px solid transparent; border-left: 10px solid var(--blue); }
-    .stop { position: relative; padding-top: 38px; }
-    .stop::before { content: ""; position: absolute; top: 0; left: 0; width: 20px; height: 20px; border-radius: 50%;
-                    background: #fff; border: 4px solid var(--blue); }
+    .route { position: relative; padding-left: 40px; }
+    .route::before { content: ""; position: absolute; left: 9px; top: 6px; bottom: 6px; width: 2px; background: var(--blue); }
+    .stop { position: relative; display: grid; grid-template-columns: 250px 1fr; gap: 32px; padding: 0 0 44px; }
+    .stop:last-child { padding-bottom: 0; }
+    .stop::before { content: ""; position: absolute; top: 4px; left: -40px; width: 20px; height: 20px; border-radius: 50%;
+                    background: var(--paper); border: 4px solid var(--blue); }
     .stop.now::before { background: var(--blue); }
     .years { font-size: 14px; color: var(--blue); font-weight: 700; font-variant-numeric: tabular-nums; }
     .company { font-size: 22px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; margin: 2px 0 0; }
-    .title { font-size: 15px; color: var(--muted); margin: 0 0 12px; }
-    .stop ul { margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.65; color: #343C50; }
-    .stop li { margin-bottom: 6px; }
+    .title { font-size: 15px; color: var(--muted); margin: 2px 0 0; line-height: 1.55; }
+    .stop ul { margin: 0; padding-left: 18px; font-size: 16px; line-height: 1.65; color: #343C50; max-width: 640px; }
+    .stop li { margin-bottom: 8px; }
+    .stop li b { color: var(--ink); font-weight: 700; }
 
     /* education */
     .edu { display: grid; gap: 0; max-width: 760px; }
@@ -122,11 +123,10 @@
     @media (max-width: 820px) {
       .hero { grid-template-columns: 1fr; padding: 48px 24px 56px; gap: 32px; }
       .photo { width: 150px; height: 150px; order: -1; }
-      .route { grid-template-columns: 1fr; gap: 32px; padding-left: 36px; }
-      .route::before { top: 0; bottom: 0; left: 9px; right: auto; width: 2px; height: auto; }
-      .route::after { display: none; }
-      .stop { padding-top: 0; }
-      .stop::before { left: -36px; top: 2px; }
+      .route { padding-left: 34px; }
+      .stop { grid-template-columns: 1fr; gap: 14px; padding-bottom: 36px; }
+      .stop::before { left: -34px; }
+      .stop ul { font-size: 15px; }
       .links { gap: 14px; }
       .links a.hide-sm { display: none; }
       section { padding: 56px 0; }
@@ -173,10 +173,10 @@
     <div class="wrap">
       <h2>Business Development × Partner Strategy × AI</h2>
       <p class="lead">I've spent 9+ years in business development and partnerships, centered on ad tech and digital advertising and spanning fintech, e-commerce, and blockchain. I've led partner negotiations, product launches, and go-to-market programs, from regulated payment products to enterprise advertising partnerships.</p>
-      <p class="lead">I work directly with C-level executives and bring Product, Engineering, Legal, Finance, and Operations together from first negotiation through launch. Now I'm pursuing an M.S. at KAIST in data, AI, and technology strategy, to find the right problems and solve them faster with AI.</p>
+      <p class="lead">I bring Product, Engineering, Legal, Finance, and Operations together from first negotiation through launch. Now I'm pursuing an M.S. at KAIST in data, AI, and technology strategy, to find the right problems and solve them faster with AI.</p>
       <div class="tags">
         <span class="tag">Strategic partnerships</span>
-        <span class="tag">C-level negotiation</span>
+        <span class="tag">Partner negotiation</span>
         <span class="tag">Contract structuring</span>
         <span class="tag">GTM &amp; market strategy</span>
         <span class="tag">Product launches</span>
@@ -189,44 +189,56 @@
     <div class="wrap">
       <h2>Experience</h2>
       <div class="route">
-        <div class="stop">
-          <div class="years">2017 – 2019</div>
-          <p class="company">Amazon</p>
-          <p class="title">Selling Partner &amp; Brand Support, Amazon Global Selling</p>
-          <ul>
-            <li>Joined the first cohort of the Korea site and helped build its early operations</li>
-            <li>Became the site's first certified specialized mentor and trainer</li>
-            <li>Handled 5,000+ complex seller cases and ran weekly seller seminars</li>
-          </ul>
-        </div>
-        <div class="stop">
-          <div class="years">2019 – 2020</div>
-          <p class="company">Terraform Labs</p>
-          <p class="title">Business Development Manager</p>
-          <ul>
-            <li>Built partnerships with 20+ major Korean e-commerce and retail platforms</li>
-            <li>Worked with global partners including Samsung Electronics on blockchain initiatives</li>
-            <li>Managed DeFi partnerships and global exchange-listing initiatives</li>
-          </ul>
-        </div>
-        <div class="stop">
-          <div class="years">2020 – 2021</div>
-          <p class="company">CHAI</p>
-          <p class="title">Business Development / Project Manager, CHAI Card</p>
-          <ul>
-            <li>Led the end-to-end launch of the CHAI Card debit product</li>
-            <li>Negotiated with C-level executives at payment networks and card manufacturers</li>
-            <li>Built partnerships with banks, card issuers, and securities firms</li>
-          </ul>
-        </div>
         <div class="stop now">
-          <div class="years">2021 – now</div>
-          <p class="company">Toss</p>
-          <p class="title">Account Manager / Business Development, Ads Business</p>
+          <div>
+            <div class="years">Aug 2021 – now</div>
+            <p class="company">Toss</p>
+            <p class="title">Account Manager / Business Development<br>Ads Business</p>
+          </div>
           <ul>
-            <li>Built the beauty vertical strategy and go-to-market plan</li>
-            <li>Launched a co-marketing alliance with Shinhan Card in under three weeks</li>
-            <li>Grew a portfolio of 300+ B2B advertisers with Product, Engineering, and Data teams</li>
+            <li><b>Vertical strategy &amp; GTM.</b> Built the beauty vertical strategy and go-to-market plan from market research and advertiser feedback, and planned a beauty-focused webinar with the Data and B2B Marketing teams.</li>
+            <li><b>Strategic alliance.</b> Structured and launched a co-marketing partnership with a major card issuer in under three weeks, from deal terms to launch.</li>
+            <li><b>Enterprise account growth.</b> Won and scaled the Display Ads business's largest enterprise account by turning partner needs into product improvements.</li>
+            <li><b>Advertiser portfolio.</b> Managed onboarding, retention, and growth for 300+ B2B advertisers, and helped launch new ad products with Product, Engineering, and Data.</li>
+            <li><b>Partner enablement.</b> Designed and ran the first-ever Toss Ads workshop for an enterprise beauty brand's marketing team.</li>
+          </ul>
+        </div>
+        <div class="stop">
+          <div>
+            <div class="years">Mar 2020 – Aug 2021</div>
+            <p class="company">CHAI</p>
+            <p class="title">Business Development Manager / Project Manager<br>CHAI Card</p>
+          </div>
+          <ul>
+            <li><b>Product launch.</b> Led the end-to-end launch of the CHAI Card debit product, coordinating external partners with Engineering, Legal, Finance, and Operations from contract negotiation through launch.</li>
+            <li><b>Network partnerships.</b> Structured agreements with transportation card networks, global and domestic payment networks, and card manufacturers, aligning commercial, technical, and operational requirements.</li>
+            <li><b>Financial partnerships.</b> Managed open-banking contracts and integrations, and developed partnership concepts with banks, card issuers, and securities firms, including PLCC, BNPL, and bank-account offerings.</li>
+            <li><b>Regulation &amp; licensing.</b> Led workstreams to meet Korean debit-card regulations and global card-network licensing requirements, and represented the company in the Korea Fintech Industry Association.</li>
+          </ul>
+        </div>
+        <div class="stop">
+          <div>
+            <div class="years">Aug 2019 – Mar 2020</div>
+            <p class="company">Terraform Labs</p>
+            <p class="title">Business Development Manager</p>
+          </div>
+          <ul>
+            <li><b>Commerce partnerships.</b> Built and ran partnerships for a mobile payment service with 20+ major Korean e-commerce and retail platforms, covering contract negotiation, technical integration, joint promotions, and ongoing operations.</li>
+            <li><b>Global initiatives.</b> Worked with global technology and financial partners to develop blockchain initiatives and align business and technical requirements.</li>
+            <li><b>Ecosystem.</b> Managed DeFi partnerships and global exchange-listing initiatives across Legal, Finance, Engineering, and external stakeholders.</li>
+          </ul>
+        </div>
+        <div class="stop">
+          <div>
+            <div class="years">Aug 2017 – Aug 2019</div>
+            <p class="company">Amazon</p>
+            <p class="title">Selling Partner &amp; Brand Support<br>Amazon Global Selling</p>
+          </div>
+          <ul>
+            <li><b>Korea site launch.</b> Joined the Korea site's first cohort and helped set up its early operations through knowledge content, mentoring, and training.</li>
+            <li><b>Seller insights.</b> Co-led a program that found recurring issues among high-value global sellers and turned them into targeted support and training plans.</li>
+            <li><b>Team enablement.</b> Became the site's first certified specialized mentor and trainer, and wrote advisory content that raised team-level performance.</li>
+            <li><b>Partner operations.</b> Handled 5,000+ complex seller cases, ran weekly seller seminars, and represented the team at the 2018 Global Seller Conference.</li>
           </ul>
         </div>
       </div>
