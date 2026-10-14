@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>홍하경 Hakyung Hong</title>
-  <meta name="description" content="홍하경 Hakyung Hong — Business Development × Partner Strategy × AI. 시장을 읽고, 파트너와 만들고, 성과로 연결합니다.">
+  <title>Hakyung Hong</title>
+  <meta name="description" content="Hakyung Hong — Strategic partnerships and business development across ad tech, fintech, e-commerce and blockchain.">
   <meta name="theme-color" content="#FBFCFE">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <style>
@@ -88,28 +88,31 @@
     .stop ul { margin: 0; padding-left: 18px; font-size: 15px; line-height: 1.65; color: #343C50; }
     .stop li { margin-bottom: 6px; }
 
-    /* goals */
-    .goal-head { display: inline-block; background: #FFF0EE; color: var(--coral); font-weight: 700;
-                 padding: 6px 14px; border-radius: 8px; margin-bottom: 28px; }
-    .goals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .goals p { margin: 0; }
-    .goals strong { display: block; color: var(--ink); font-size: 18px; margin-bottom: 6px; }
+    /* education */
+    .edu { display: grid; gap: 0; max-width: 760px; }
+    .edu-row { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .edu-row:first-child { padding-top: 0; }
+    .edu-row .years { padding-top: 4px; }
+    .school { font-size: 20px; font-weight: 800; color: var(--ink); margin: 0; letter-spacing: -0.02em; }
+    .degree { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
 
-    /* drives */
-    .drives { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1.5px solid var(--ink); border-radius: 16px; overflow: hidden; }
-    .drive { padding: 28px 26px; }
-    .drive + .drive { border-left: 1.5px solid var(--ink); }
-    .drive h3 { margin: 0 0 8px; font-size: 24px; color: var(--ink); letter-spacing: -0.02em; }
-    .drive p { margin: 0; color: #343C50; }
-    .drive.family h3 { color: var(--coral); }
+    /* belief */
+    .belief { background: var(--ink); color: #D5DEF3; border-top: 0; }
+    .belief h2 { color: #fff; max-width: 640px; }
+    .belief .lead { color: #D5DEF3; }
+    .virtues { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 40px; border-top: 1px solid #2E3D6B; }
+    .virtue { padding: 22px 20px 0 0; }
+    .virtue b { display: block; color: #fff; font-size: 19px; margin-bottom: 4px; }
+    .virtue span { font-size: 15px; color: #AEBBDB; }
 
-    /* project */
-    .project { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
-               background: var(--ink); color: #DCE4F7; border-radius: 16px; padding: 36px 36px; }
-    .project h3 { margin: 0 0 6px; color: #fff; font-size: 24px; letter-spacing: -0.02em; }
-    .project p { margin: 0; }
-    .project .btn { border-color: #fff; color: #fff; }
-    .project .btn:hover { background: #fff; color: var(--ink); }
+    /* beyond work */
+    .beyond { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 40px; row-gap: 36px; }
+    .beyond h3 { margin: 0 0 6px; font-size: 13px; font-weight: 700; color: var(--blue); letter-spacing: 0.02em; }
+    .beyond p { margin: 0; font-size: 16px; color: #343C50; }
+    .beyond strong { display: block; font-size: 19px; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.02em; }
+
+    .langs { margin-top: 28px; max-width: 760px; font-size: 15px; color: var(--muted); }
+    .langs b { color: var(--ink); margin-right: 8px; }
 
     /* contact */
     .contact h2 { margin-bottom: 12px; }
@@ -124,13 +127,12 @@
       .route::after { display: none; }
       .stop { padding-top: 0; }
       .stop::before { left: -36px; top: 2px; }
-      .goals { grid-template-columns: 1fr; gap: 22px; }
-      .drives { grid-template-columns: 1fr; }
-      .drive + .drive { border-left: 0; border-top: 1.5px solid var(--ink); }
       .links { gap: 14px; }
       .links a.hide-sm { display: none; }
       section { padding: 56px 0; }
-      .project { padding: 28px 24px; }
+      .edu-row { grid-template-columns: 1fr; gap: 4px; }
+      .virtues { grid-template-columns: 1fr 1fr; row-gap: 20px; }
+      .beyond { grid-template-columns: 1fr; row-gap: 26px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
@@ -141,9 +143,11 @@
     <div class="wrap">
       <a class="brand" href="#top">Hakyung Hong</a>
       <div class="links">
-        <a href="#about">소개</a>
-        <a href="#career">커리어</a>
-        <a href="#contact">연락</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a class="hide-sm" href="#education">Education</a>
+        <a class="hide-sm" href="#beyond">Beyond work</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -151,89 +155,145 @@
   <header class="wrap hero" id="top">
     <div>
       <h1>
-        <span>시장을 읽고,</span>
-        <span>파트너와 만들고,</span>
-        <span>성과로 연결합니다.</span>
+        <span>Read the market.</span>
+        <span>Build with partners.</span>
+        <span>Turn it into results.</span>
       </h1>
-      <p class="who">홍하경 <small>Hakyung Hong</small></p>
-      <p class="role">Account Manager @ Toss · KAIST IMMS 14기</p>
+      <p class="who">Hakyung Hong <small>홍하경</small></p>
+      <p class="role">Strategic Partnerships &amp; Business Development · Toss · M.S. candidate at KAIST</p>
       <div class="btns">
         <a class="btn primary" href="https://www.linkedin.com/in/hakyung-hong-16862a159" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/hakyung-hong" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-    <img class="photo" src="profile.jpg" alt="홍하경 프로필 사진">
+    <img class="photo" src="profile.jpg" alt="Portrait of Hakyung Hong">
   </header>
 
   <section id="about">
     <div class="wrap">
       <h2>Business Development × Partner Strategy × AI</h2>
-      <p class="lead">핀테크, 디지털 광고, 이커머스, 블록체인 분야에서 9년 넘게 일해왔습니다. 시장을 읽고, 파트너와 함께 만들고, 그것을 실제 성과로 연결하는 일을 좋아합니다.</p>
-      <p class="lead">데이터와 시장 감각으로 비즈니스를 이해하고, 이제는 AI로 그 과정을 더 빠르게 실행해보고 싶습니다. 좋은 문제를 발견하고, 좋은 사람들과 함께 실제로 작동하는 결과물을 만드는 것이 목표입니다.</p>
+      <p class="lead">I've spent 9+ years in business development and partnerships, centered on ad tech and digital advertising and spanning fintech, e-commerce, and blockchain. I've led partner negotiations, product launches, and go-to-market programs, from regulated payment products to enterprise advertising partnerships.</p>
+      <p class="lead">I work directly with C-level executives and bring Product, Engineering, Legal, Finance, and Operations together from first negotiation through launch. Now I'm pursuing an M.S. at KAIST in data, AI, and technology strategy, to find the right problems and solve them faster with AI.</p>
       <div class="tags">
-        <span class="tag">#Fintech</span>
-        <span class="tag">#Ads</span>
-        <span class="tag">#GTM</span>
-        <span class="tag">#AI</span>
+        <span class="tag">Strategic partnerships</span>
+        <span class="tag">C-level negotiation</span>
+        <span class="tag">Contract structuring</span>
+        <span class="tag">GTM &amp; market strategy</span>
+        <span class="tag">Product launches</span>
+        <span class="tag">Cross-functional leadership</span>
       </div>
     </div>
   </section>
 
-  <section id="career">
+  <section id="experience">
     <div class="wrap">
-      <h2>Career path</h2>
+      <h2>Experience</h2>
       <div class="route">
         <div class="stop">
           <div class="years">2017 – 2019</div>
           <p class="company">Amazon</p>
-          <p class="title">Global Seller Ops</p>
+          <p class="title">Selling Partner &amp; Brand Support, Amazon Global Selling</p>
           <ul>
-            <li>한국 셀러 교육 프로세스 수립·운영</li>
-            <li>신입 교육 콘텐츠·프로그램 기획</li>
-            <li>운영 개선 및 고객 경험 프로세스 구축</li>
+            <li>Joined the first cohort of the Korea site and helped build its early operations</li>
+            <li>Became the site's first certified specialized mentor and trainer</li>
+            <li>Handled 5,000+ complex seller cases and ran weekly seller seminars</li>
           </ul>
         </div>
         <div class="stop">
           <div class="years">2019 – 2020</div>
           <p class="company">Terraform Labs</p>
-          <p class="title">Blockchain BD</p>
+          <p class="title">Business Development Manager</p>
           <ul>
-            <li>글로벌 블록체인 프로젝트·파트너십 추진</li>
-            <li>글로벌 파트너 발굴 및 사업 협업</li>
-            <li>몽골 JV 기반 블록체인 결제 서비스 출시</li>
+            <li>Built partnerships with 20+ major Korean e-commerce and retail platforms</li>
+            <li>Worked with global partners including Samsung Electronics on blockchain initiatives</li>
+            <li>Managed DeFi partnerships and global exchange-listing initiatives</li>
           </ul>
         </div>
         <div class="stop">
           <div class="years">2020 – 2021</div>
-          <p class="company">CHAI Corporation</p>
-          <p class="title">BD &amp; Product</p>
+          <p class="company">CHAI</p>
+          <p class="title">Business Development / Project Manager, CHAI Card</p>
           <ul>
-            <li>게이미피케이션을 접목한 카드·결제 서비스 기획 및 고도화</li>
-            <li>직불카드 상품 사업 운영, End-to-End 프로젝트 매니지먼트</li>
-            <li>신규 사업 기회 검토 및 실행 전략 수립</li>
+            <li>Led the end-to-end launch of the CHAI Card debit product</li>
+            <li>Negotiated with C-level executives at payment networks and card manufacturers</li>
+            <li>Built partnerships with banks, card issuers, and securities firms</li>
           </ul>
         </div>
         <div class="stop now">
           <div class="years">2021 – now</div>
           <p class="company">Toss</p>
-          <p class="title">Ads Business</p>
+          <p class="title">Account Manager / Business Development, Ads Business</p>
           <ul>
-            <li>광고주·파트너 커뮤니케이션 및 제안</li>
-            <li>시장 분석 기반 GTM 전략 실행</li>
-            <li>데이터 기반 성장 및 수익화 기여</li>
+            <li>Built the beauty vertical strategy and go-to-market plan</li>
+            <li>Launched a co-marketing alliance with Shinhan Card in under three weeks</li>
+            <li>Grew a portfolio of 300+ B2B advertisers with Product, Engineering, and Data teams</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="edu">
+        <div class="edu-row">
+          <div class="years">2025 – now</div>
+          <div>
+            <p class="school">KAIST</p>
+            <p class="degree">M.S. candidate, Information Management &amp; Management Science (IMMS)<br>Data analytics and AI, technology strategy, IT governance, business transformation</p>
+          </div>
+        </div>
+        <div class="edu-row">
+          <div class="years">2012 – 2017</div>
+          <div>
+            <p class="school">Korea University</p>
+            <p class="degree">B.A., Spanish Language &amp; Literature<br>Double major, Latin American Regional Studies</p>
+          </div>
+        </div>
+        <div class="edu-row">
+          <div class="years">2014</div>
+          <div>
+            <p class="school">University of Salamanca</p>
+            <p class="degree">Study abroad, Department of Philology · Salamanca, Spain</p>
+          </div>
+        </div>
+      </div>
+      <p class="langs"><b>Languages</b>Korean (native) · English (professional) · Spanish (conversational)</p>
+    </div>
+  </section>
 
+  <section id="belief" class="belief">
+    <div class="wrap">
+      <h2>As technology speeds up, I think about what stays human.</h2>
+      <p class="lead">AI is changing how fast we can execute. That makes deciding what to do, why, and with whom even more of a human job. Alongside learning to use AI well, I think deeply about the human qualities we need to protect and grow in this era.</p>
+      <div class="virtues">
+        <div class="virtue"><b>Curiosity</b><span>Finding the right problem</span></div>
+        <div class="virtue"><b>Empathy</b><span>Reading the other side's context</span></div>
+        <div class="virtue"><b>Trust</b><span>Relationships built over time</span></div>
+        <div class="virtue"><b>Judgment</b><span>Knowing what is right to choose</span></div>
+      </div>
+    </div>
+  </section>
 
+  <section id="beyond">
+    <div class="wrap">
+      <h2>Beyond work</h2>
+      <div class="beyond">
+        <div><h3>Wellness</h3><p><strong>Good condition, good judgment</strong>I believe caring for body and mind is the most lasting edge there is.</p></div>
+        <div><h3>Family</h3><p><strong>Growing up alongside two kids</strong>Seeing the world through their eyes gives me a new perspective every day.</p></div>
+        <div><h3>Travel</h3><p><strong>Living in a new city's rhythm</strong>My thinking stretches furthest when I step outside the familiar.</p></div>
+        <div><h3>Sports</h3><p><strong>F1, football, baseball</strong>I love moments where strategy, data, and split-second calls decide the game. Watching a match feels a lot like reading a market.</p></div>
+        <div><h3>Connection</h3><p><strong>Bringing people together</strong>Good connections create good opportunities, and I enjoy being where they start.</p></div>
+        <div><h3>Experience</h3><p><strong>Every experience connects somewhere</strong>I try not to let small experiences pass by. They tend to pay off in unexpected places.</p></div>
+      </div>
+    </div>
+  </section>
 
   <section id="contact" class="contact">
     <div class="wrap">
-      <h2>관심이 겹친다면, 이야기 나눠요.</h2>
-      <p class="lead">파트너십, GTM, 핀테크, 그리고 AI로 일하는 방식에 대해 편하게 연락 주세요.</p>
+      <h2>Always up for a good conversation over coffee.</h2>
+      <p class="lead">If you'd like to talk about ad tech, partnerships, opening new markets, or how AI will change the way we work, I'd love to hear from you.</p>
       <div class="btns">
         <a class="btn primary" href="https://www.linkedin.com/in/hakyung-hong-16862a159" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/hakyung-hong" target="_blank" rel="noopener">GitHub</a>
@@ -244,7 +304,7 @@
   <footer>
     <div class="wrap">
       <span>© 2026 Hakyung Hong</span>
-      <a href="#top">처음으로 ↑</a>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
 
